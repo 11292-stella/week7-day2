@@ -1,18 +1,10 @@
-const nameInput = document.getElementById("textName")
+let counter = 1
 
-// Pulsante Salva
+const numCont = document.getElementById("num")
 
-const btSave = document.getElementById("salva")
-btSave.addEventListener("click", function () {
-  const veryName = nameInput.value
-  localStorage.setItem("veryName", veryName)
-  console.log(localStorage.getItem("veryName"))
-})
-
-// pulsante remove
-
-const btRemove = document.getElementById("remove")
-btRemove.addEventListener("click", function () {
-  nameInput.value = ""
-  localStorage.removeItem("veryName")
-})
+setInterval(function () {
+  const newDiv = document.createElement("div")
+  numCont.innerText = counter
+  numCont.appendChild(newDiv)
+  counter++
+}, 1000)
