@@ -8,3 +8,11 @@ btSave.addEventListener("click", function () {
   localStorage.setItem("veryName", veryName)
   console.log(localStorage.getItem("veryName"))
 })
+
+// pulsante remove
+
+const btRemove = document.getElementById("remove")
+btRemove.addEventListener("click", function () {
+  nameInput.value = ""
+  localStorage.removeItem("veryName")
+})
